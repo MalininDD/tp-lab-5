@@ -1,7 +1,7 @@
 // Copyright 2021 Dmitry Malinin
+#include "gtest/gtest.h"
 #include "../include/Student.h"
 #include "../include/Group.h"
-#include <gtest/gtest.h>
 #include <string>
 #include <iostream>
 
