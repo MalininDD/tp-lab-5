@@ -9,29 +9,29 @@ class Group;
 
 class Student{
 private:
-    int id;
-    std::string fio;
-    Group * group;
-    std::vector<int> marks;
+ int id;
+ std::string fio;
+ Group * group;
+ std::vector<int> marks;
     
 public:
-    Student(int id, std::string fio);
-    
-    ~Student();
-    
-    double getAveragemark();
-    
-    int getId();
-    
-    std::string getFio();
-    
-    void addToGroup(Group * groupName);
-    
-    void addMark(int mark);
-    
-    void changeId(int index);
-    
-    Group * getGroup();
+ explicit Student(int id, std::string fio);
+
+ ~Student();
+
+ double getAveragemark();
+
+ int getId();
+
+ std::string getFio();
+
+ void addToGroup(Group * groupName);
+
+ void addMark(int mark);
+
+ void changeId(int index);
+
+ Group * getGroup();
 };
 
 #endif  // INCLUDE_STUDENT_H_
