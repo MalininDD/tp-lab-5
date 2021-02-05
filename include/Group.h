@@ -8,40 +8,40 @@
 class Student;
 
 class Group{
-private:
- std::string title;
- std::string spec;
- std::vector<Student*> students;
- Student * head;
+ private:
+    std::string title;
+    std::string spec;
+    std::vector<Student*> students;
+    Student * head;
 
-public:
- explicit Group(std::string title, std::string spec);
+ public:
+    explicit Group(std::string title, std::string spec);
 
- explicit Group(std::string title);
+    explicit Group(std::string title);
 
- void addStudent(Student * student);
+    void addStudent(Student * student);
 
- void chooseHead(Student * student);
+    void chooseHead(Student * student);
 
- void chooseHead();
+    void chooseHead();
 
- void removeStudent(Student *student1);
+    void removeStudent(Student *student1);
 
- double getAverageMark();
+    double getAverageMark();
 
- Student * containsStudent(int num);
+    Student * containsStudent(int num);
 
- Student * containsStudent(std::string fio);
+    Student * containsStudent(std::string fio);
 
- int countStudent();
+    int countStudent();
 
- std::vector<Student*> listStudent();
+    std::vector<Student*> listStudent();
 
- std::string getSpec();
+    std::string getSpec();
 
- std::string getTitle();
+    std::string getTitle();
 
- bool isEmpty();
+    bool isEmpty();
 };
 
 #endif  // INCLUDE_GROUP_H_
