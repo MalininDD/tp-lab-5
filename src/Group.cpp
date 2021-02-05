@@ -17,50 +17,48 @@ void Group::addStudent(Student * student) {
     students.push_back(student);
 }
 
-void Group::chooseHead(Student * student){
+void Group::chooseHead(Student * student) {
     head = student;
 }
 
-void Group::chooseHead(){
+void Group::chooseHead() {
     srand(0);
-    if(countStudent()-1 >= 1)
+    if (countStudent()-1 >= 1)
         head = this->students[rand() % (this->countStudent()-1)];
     else if (countStudent() > 0)
         head = this->students[0];
 }
 
-void Group::removeStudent(Student* student){
+void Group::removeStudent(Student* student) {
     if (head == student)
         head = nullptr;
     student->addToGroup(nullptr);
-    int size = (int)this->students.size();
     for (int i = 0; i < students.size(); i++) {
         if (student == students[i]) {
             students.erase(students.begin() + i);
-//            delete student;
             break;
         }
     }
 }
-double Group::getAverageMark(){
+double Group::getAverageMark() {
     double average = 0.0;
     for (int i = 0; i < students.size(); i++) {
         average += students[i]->getAveragemark();
     }
-    if(students.size())
+    if (students.size())
         return average/students.size();
     return 0.0;
 }
 
-Student * Group::containsStudent(int num){
+Student * Group::containsStudent(int num) {
     for (int i = 0; i < students.size(); i++)
-        if(students[i]->getId() == num)
+        if (students[i]->getId() == num)
             return students[i];
     return nullptr;
 }
-Student * Group::containsStudent(std::string fio){
+Student * Group::containsStudent(std::string fio) {
     for (int i = 0; i < students.size(); i++)
-        if(students[i]->getFio() == fio)
+        if (students[i]->getFio() == fio)
             return students[i];
     return nullptr;
 }
@@ -69,7 +67,7 @@ int Group::countStudent() {
     return (int)this->students.size();
 }
 
-std::vector<Student*> Group::listStudent(){
+std::vector<Student*> Group::listStudent() {
     return students;
 }
 
@@ -81,7 +79,7 @@ std::string Group::getTitle() {
     return this->title;
 }
 
-bool Group::isEmpty(){
+bool Group::isEmpty() {
     if (!this->students.size())
         return true;
     return false;
