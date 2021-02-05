@@ -25,7 +25,7 @@ public:
     
     void chooseHead();
     
-    void removeStudent(Student * student);
+    void removeStudent(Student *student1);
     
     double getAverageMark();
     
