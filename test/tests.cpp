@@ -1,10 +1,8 @@
 // Copyright 2021 Dmitry Malinin
+#include "gtest/gtest.h"
 #include "Student.h"
 #include "Group.h"
-#include "Deanary.h"
-//#include <gtest/gtest.h>
 #include <string>
-#include <iostream>
 
 TEST(MyDeaneryTest, test1) {
     unsigned int id = 11;
