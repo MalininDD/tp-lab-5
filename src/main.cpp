@@ -3,7 +3,7 @@
 #include <string>
 #include "Student.h"
 #include "Group.h"
-#include "Deanery.h"
+#include "Deanary.h"
 
 
 int main() {
@@ -20,7 +20,7 @@ int main() {
     group.addStudent(&student2);
     std::cout << group.isEmpty() << std::endl;
     
-    Deanery deanery("DataGroup.txt");
+    Deanary deanery("DataGroup.txt");
     deanery.hireStudents("DataStudent.txt");
     deanery.addMarksToAll(4);
     deanery.addMarksToAll(5);
