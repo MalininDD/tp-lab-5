@@ -34,10 +34,10 @@ void Group::removeStudent(Student* student){
         head = nullptr;
     student->addToGroup(nullptr);
     int size = (int)this->students.size();
-    for (int i = 0; i < students.size(); ++i) {
+    for (int i = 0; i < students.size(); i++) {
         if (student == students[i]) {
             students.erase(students.begin() + i);
-            delete student;
+//            delete student;
             break;
         }
     }
