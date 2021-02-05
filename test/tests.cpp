@@ -1,8 +1,8 @@
 // Copyright 2021 Dmitry Malinin
 #include "Student.h"
 #include "Group.h"
-#include "Deanery.h"
-#include <gtest/gtest.h>
+#include "Deanary.h"
+//#include <gtest/gtest.h>
 #include <string>
 #include <iostream>
 
