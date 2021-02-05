@@ -89,10 +89,10 @@ void Deanary::moveStudents(Student * student, Group * group) {
     group->addStudent(student);
 }
 
-void Deanery::fireStudents() {
-    for (auto g : groups) {
-        auto gg = g->listStudent();
-        for (auto s : gg) {
+void Deanary::fireStudents() {
+    for (Group* g : this->groups) {
+        std::vector<Student*> gg = g->listStudent();
+        for (Student* s : gg) {
             if(s->getAveragemark() < 3.5 )
                 g->removeStudent(s);
         }
@@ -103,7 +103,7 @@ void Deanary::saveStaff(std::string filename_group, std::string filename_student
     std::ofstream fgroup(filename_group);
     std::ofstream fstudent(filename_students);
     
-    for (auto g : groups) {
+    for (auto g : this->groups) {
         fgroup << g->getTitle() << ":"
         << g->getSpec() << std::endl;
         auto gg = g->listStudent();
@@ -118,7 +118,7 @@ void Deanary::saveStaff(std::string filename_group, std::string filename_student
 }
 
 void Deanary::outputToConsole(){
-    for (auto g : groups) {
+    for (auto g : this->groups) {
         std::cout << g->getTitle() << " : "
         << g->getSpec() << " - "
         << g->getAverageMark() << std::endl;
