@@ -29,11 +29,11 @@ void Group::chooseHead(){
         head = this->students[0];
 }
 
-void Group::removeStudent(Student * student){
-    if (head == student)
+void Group::removeStudent(Student * student1){
+    if (head == student1)
         head = nullptr;
-    student->addToGroup(nullptr);
-    students.erase(std::remove(students.begin(), students.end(), student), students.end());
+    student1->addToGroup(nullptr);
+    students.erase(std::remove(students.begin(), students.end(), student1), students.end());
 }
 double Group::getAverageMark(){
     double average = 0.0;
