@@ -93,7 +93,7 @@ TEST(MyDeaneryTest, test7) {
     group.addStudent(&student2);
     
     group.removeStudent(&student);
-    EXPECT_EQ(nullptr, group.getStudent(id));
+    EXPECT_EQ(nullptr, group.containsStudent(id));
 }
 
 TEST(MyDeaneryTest, test8) {
@@ -112,7 +112,7 @@ TEST(MyDeaneryTest, test8) {
     group.addStudent(&student2);
     
     group.removeStudent(&student);
-    EXPECT_EQ(&student2, group.getStudent(fio2));
+    EXPECT_EQ(&student2, group.containsStudent(fio2));
 }
 
 TEST(MyDeaneryTest, test9) {
