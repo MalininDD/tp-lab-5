@@ -16,7 +16,7 @@ class Deanary{
 
  public:
     explicit Deanary(std::string filename);
-    
+
     void createGroups(std::string filename);
 
     void hireStudents(std::string filename);
