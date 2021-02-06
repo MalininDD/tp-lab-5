@@ -1,9 +1,10 @@
 // Copyright 2021 MalininDmitry
+#include <random>
+#include <iostream>
 #include "Group.h"
 #include "Student.h"
 #include "Deanary.h"
-#include <random>
-#include <iostream>
+
 
 
 void Deanary::createGroups(std::string filename) {
@@ -38,10 +39,11 @@ void Deanary::hireStudents(std::string filename) {
     std::string input;
     std::ifstream file(filename);
     int index = 0;
+    unsigned int seed = 5;
     srand(0);
     while (getline(file, input)) {
         Student* stud = new Student(0, input);
-        index = rand() % (this->groups.size());
+        index = rand_r(&seed) % (this->groups.size());
         stud->changeId(this->groups[index]->countStudent());
         this->groups[index]->addStudent(stud);
     }

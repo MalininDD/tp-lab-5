@@ -64,7 +64,7 @@ Student * Group::containsStudent(std::string fio) {
 }
 
 int Group::countStudent() {
-    return (int)this->students.size();
+    return static_cast<int>(this->students.size());
 }
 
 std::vector<Student*> Group::listStudent() {
