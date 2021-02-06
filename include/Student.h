@@ -13,7 +13,7 @@ class Student{
     std::string fio;
     Group * group;
     std::vector<int> marks;
-    
+
  public:
     explicit Student(int id, std::string fio);
 
