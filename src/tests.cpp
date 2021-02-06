@@ -1,10 +1,8 @@
 // Copyright 2021 Dmitry Malinin
-#include "gtest/gtest.h"
-#include "../include/Student.h"
-#include "../include/Group.h"
 #include <string>
-#include <iostream>
-
+#include "gtest/gtest.h"
+#include "Student.h"
+#include "Group.h"
 TEST(MyDeaneryTest, test1) {
     unsigned int id = 11;
     std::string fio = "Ddsa Sfdsfsdf";
@@ -42,7 +40,7 @@ TEST(MyDeaneryTest, test4) {
     Group group(title, spec);
     group.addStudent(&student);
     group.addStudent(&student2);
-    
+
     EXPECT_EQ(false, group.isEmpty());
 }
 
@@ -92,9 +90,9 @@ TEST(MyDeaneryTest, test7) {
     Group group(title, spec);
     group.addStudent(&student);
     group.addStudent(&student2);
-    
+
     group.removeStudent(&student);
-    EXPECT_EQ(nullptr, group.getStudent(id));
+    EXPECT_EQ(nullptr, group.containsStudent(id));
 }
 
 TEST(MyDeaneryTest, test8) {
@@ -111,9 +109,9 @@ TEST(MyDeaneryTest, test8) {
     Group group(title, spec);
     group.addStudent(&student);
     group.addStudent(&student2);
-    
+
     group.removeStudent(&student);
-    EXPECT_EQ(&student2, group.getStudent(fio2));
+    EXPECT_EQ(&student2, group.containsStudent(fio2));
 }
 
 TEST(MyDeaneryTest, test9) {
@@ -130,7 +128,7 @@ TEST(MyDeaneryTest, test9) {
     Group group(title, spec);
     group.addStudent(&student);
     group.addStudent(&student2);
-    
+
     EXPECT_EQ("Group1", group.getTitle());
 }
 
@@ -148,7 +146,7 @@ TEST(MyDeaneryTest, test10) {
     Group group(title, spec);
     group.addStudent(&student);
     group.addStudent(&student2);
-    
+
     EXPECT_EQ("AMI", group.getSpec());
 }
 
@@ -162,7 +160,7 @@ TEST(MyDeaneryTest, test11) {
     std::string title = "Group1";
     std::string spec = "AMI";
     Group group(title, spec);
-    
+
     EXPECT_EQ(true, group.isEmpty());
 }
 

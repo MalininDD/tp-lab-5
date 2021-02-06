@@ -19,7 +19,7 @@ int main() {
     group.addStudent(&student1);
     group.addStudent(&student2);
     std::cout << group.isEmpty() << std::endl;
-    
+
     Deanary deanery("DataGroup.txt");
     deanery.hireStudents("DataStudent.txt");
     deanery.addMarksToAll(4);
@@ -28,9 +28,9 @@ int main() {
 
     deanery.fireStudents();
     deanery.outputToConsole();
-    
+
     deanery.getStatistics("stat.txt");
     deanery.saveStaff("DataGroup.txt", "DataStudent.txt");
-    
+
     return 0;
 }
